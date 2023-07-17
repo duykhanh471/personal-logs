@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph.xml"
+    app:startDestination="@id/dashboard">
+
+    <fragment
+        android:id="@+id/dashboard"
+        android:name="vn.onlyduyy.humnayzui.fragments.Dashboard"
+        android:label="fragment_dashboard"
+        tools:layout="@layout/fragment_dashboard" >
+        <action
+            android:id="@+id/action_dashboard_to_configuration"
+            app:destination="@id/configuration" />
+        <action
+            android:id="@+id/action_dashboard_to_spaces"
+            app:destination="@id/spaces" />
+        <action
+            android:id="@+id/action_dashboard_to_noteGallery"
+            app:destination="@id/noteGallery" />
+    </fragment>
+    <fragment
+        android:id="@+id/configuration"
+        android:name="vn.onlyduyy.humnayzui.fragments.Configuration"
+        android:label="fragment_configuration"
+        tools:layout="@layout/fragment_configuration" />
+    <fragment
+        android:id="@+id/spaces"
+        android:name="vn.onlyduyy.humnayzui.fragments.Spaces"
+        android:label="fragment_spaces"
+        tools:layout="@layout/fragment_spaces" >
+        <action
+            android:id="@+id/action_spaces_to_logEdit2"
+            app:destination="@id/logEdit2" />
+        <action
+            android:id="@+id/action_spaces_to_noteEdit"
+            app:destination="@id/noteEdit" />
+    </fragment>
+    <fragment
+        android:id="@+id/logEdit2"
+        android:name="vn.onlyduyy.humnayzui.fragments.LogEdit"
+        android:label="fragment_log_edit"
+        tools:layout="@layout/fragment_log_edit" >
+        <action
+            android:id="@+id/action_logEdit2_to_dashboard"
+            app:destination="@id/dashboard" />
+    </fragment>
+    <fragment
+        android:id="@+id/noteGallery"
+        android:name="vn.onlyduyy.humnayzui.fragments.NoteGallery"
+        android:label="fragment_note_gallery"
+        tools:layout="@layout/fragment_note_gallery" />
+    <fragment
+        android:id="@+id/noteEdit"
+        android:name="vn.onlyduyy.humnayzui.fragments.NoteEdit"
+        android:label="fragment_note_edit"
+        tools:layout="@layout/fragment_note_edit" >
+        <action
+            android:id="@+id/action_noteEdit_to_noteGallery"
+            app:destination="@id/noteGallery" />
+    </fragment>
+</navigation>

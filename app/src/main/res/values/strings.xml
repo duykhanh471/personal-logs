@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Lifelogs</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_sample">This is the title of the log</string>
+    <string name="date_time">12-Oct-18 12:46:14</string>
+    <string name="sample_log">We\'ve looked at how to instantiate SimpleDateFormat as well as how the pattern String impacts how the date is formatted.\nWe played around with changing the locales of the output String before finally experimenting with using time zones.</string>
+    <string name="dashboard_title">Dashboard</string>
+    <string name="note_menu">Note</string>
+    <string name="log_menu">Log</string>
+    <string name="configuration">Configuration</string>
+</resources>
