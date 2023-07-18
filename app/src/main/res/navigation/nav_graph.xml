@@ -39,7 +39,7 @@
     </fragment>
     <fragment
         android:id="@+id/logEdit2"
-        android:name="vn.onlyduyy.humnayzui.fragments.LogEdit"
+        android:name="vn.onlyduyy.humnayzui.other_fragments.LogEdit"
         android:label="fragment_log_edit"
         tools:layout="@layout/fragment_log_edit" >
         <action
@@ -53,7 +53,7 @@
         tools:layout="@layout/fragment_note_gallery" />
     <fragment
         android:id="@+id/noteEdit"
-        android:name="vn.onlyduyy.humnayzui.fragments.NoteEdit"
+        android:name="vn.onlyduyy.humnayzui.other_fragments.NoteEdit"
         android:label="fragment_note_edit"
         tools:layout="@layout/fragment_note_edit" >
         <action

@@ -5,7 +5,7 @@
         android:icon="@drawable/dashboard_ic"
         android:title="@string/dashboard_title"
         app:showAsAction="ifRoom"/>
-    <item android:id="@+id/note_dashboard"
+    <item android:id="@+id/noteGallery"
         android:icon="@drawable/note_ic"
         android:title="@string/note_menu"
         app:showAsAction="ifRoom"/>

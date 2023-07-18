@@ -6,7 +6,7 @@ import androidx.recyclerview.widget.RecyclerView
 import vn.onlyduyy.humnayzui.R
 import vn.onlyduyy.humnayzui.database.LogNote
 
-class LogViewHolder(private val itemView: View) : RecyclerView.ViewHolder(itemView){
+class LogViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
     private val titleText: TextView = itemView.findViewById(R.id.tvTitle)
     private val logText: TextView = itemView.findViewById(R.id.logText)
     private val logTime: TextView = itemView.findViewById(R.id.tvDateTime)

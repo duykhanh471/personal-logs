@@ -9,4 +9,7 @@
     <string name="note_menu">Note</string>
     <string name="spaces">Spaces</string>
     <string name="configuration">Configuration</string>
+    <string name="log_space">Log space</string>
+    <string name="note_space">Note space</string>
+    <string name="todo">TODO</string>
 </resources>

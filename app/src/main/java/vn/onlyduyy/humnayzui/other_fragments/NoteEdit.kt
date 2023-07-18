@@ -1,4 +1,4 @@
-package vn.onlyduyy.humnayzui.fragments
+package vn.onlyduyy.humnayzui.other_fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater

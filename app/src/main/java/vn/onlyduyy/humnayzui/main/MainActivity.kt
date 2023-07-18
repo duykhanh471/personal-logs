@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.ui.NavigationUI
 import androidx.navigation.ui.setupActionBarWithNavController
 import vn.onlyduyy.humnayzui.R
 import vn.onlyduyy.humnayzui.databinding.ActivityMainBinding
@@ -20,6 +21,6 @@ class MainActivity : AppCompatActivity() {
         //bottom nav view with nav controller
         val navigationHost = supportFragmentManager.findFragmentById(R.id.mainNavView) as NavHostFragment
         controller = navigationHost.navController
-        setupActionBarWithNavController(controller)
+        NavigationUI.setupWithNavController(binding.bottomNavigationView, controller)
     }
 }
