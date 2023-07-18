@@ -7,6 +7,6 @@
     <string name="sample_log">We\'ve looked at how to instantiate SimpleDateFormat as well as how the pattern String impacts how the date is formatted.\nWe played around with changing the locales of the output String before finally experimenting with using time zones.</string>
     <string name="dashboard_title">Dashboard</string>
     <string name="note_menu">Note</string>
-    <string name="log_menu">Log</string>
+    <string name="spaces">Spaces</string>
     <string name="configuration">Configuration</string>
 </resources>

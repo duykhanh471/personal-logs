@@ -3,8 +3,8 @@ package vn.onlyduyy.humnayzui.main
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.navigation.NavController
-import androidx.navigation.findNavController
-import androidx.navigation.ui.setupWithNavController
+import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.ui.setupActionBarWithNavController
 import vn.onlyduyy.humnayzui.R
 import vn.onlyduyy.humnayzui.databinding.ActivityMainBinding
 
@@ -18,9 +18,8 @@ class MainActivity : AppCompatActivity() {
         //toolbar
         setSupportActionBar(binding.materialToolbar)
         //bottom nav view with nav controller
-        controller = findNavController(R.id.fragmentContainerView)
-        binding.bottomNavigationView.setupWithNavController(controller)
-
-
+        val navigationHost = supportFragmentManager.findFragmentById(R.id.mainNavView) as NavHostFragment
+        controller = navigationHost.navController
+        setupActionBarWithNavController(controller)
     }
 }
