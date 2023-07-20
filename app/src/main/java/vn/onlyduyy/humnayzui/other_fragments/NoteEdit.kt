@@ -12,13 +12,13 @@ import vn.onlyduyy.humnayzui.R
 import vn.onlyduyy.humnayzui.database.LogDatabase
 import vn.onlyduyy.humnayzui.database.model.NoteData
 import vn.onlyduyy.humnayzui.database.repo.NoteRepository
-import vn.onlyduyy.humnayzui.databinding.FragmentNoteEditBinding
+import vn.onlyduyy.humnayzui.databinding.NoteEditBinding
 import vn.onlyduyy.humnayzui.viewmodel.NoteViewModel
 import vn.onlyduyy.humnayzui.viewmodel.NoteViewModelFactory
 
 
-class NoteEdit : Fragment(R.layout.fragment_note_edit) {
-    private lateinit var binding: FragmentNoteEditBinding
+class NoteEdit : Fragment(R.layout.note_edit) {
+    private lateinit var binding: NoteEditBinding
     private lateinit var noteViewModel: NoteViewModel
     private lateinit var noteRepository: NoteRepository
 
@@ -26,7 +26,7 @@ class NoteEdit : Fragment(R.layout.fragment_note_edit) {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = FragmentNoteEditBinding.inflate(inflater, container, false)
+        binding = NoteEditBinding.inflate(inflater, container, false)
         // Inflate the layout for this fragment
         return binding.root
     }

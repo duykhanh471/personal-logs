@@ -2,4 +2,12 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <!--Color palettes-->
+    <color name="backgroundColor">#0d1b2a</color>
+    <color name="foregroundColor">#1b263b</color>
+    <color name="cardColor">#415a77</color>
+    <color name="subText">#778da9</color>
+    <color name="textColor">#e0e1dd</color>
+
 </resources>

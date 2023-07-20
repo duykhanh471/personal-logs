@@ -4,6 +4,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.ListAdapter
+import vn.onlyduyy.humnayzui.R
 import vn.onlyduyy.humnayzui.database.model.LogData
 import vn.onlyduyy.humnayzui.databinding.LogCardBinding
 import vn.onlyduyy.humnayzui.fragments.DashboardDirections
@@ -17,6 +18,10 @@ class LogAdapter : ListAdapter<LogData, LogVH>(LogComparator()) {
         val currentItem = getItem(position)
         holder.bind((currentItem as LogData))
 
+        holder.itemView.setOnClickListener {
+            val updateDirect = DashboardDirections.actionDashboardToLogUpdate(currentItem)
+            it.findNavController().navigate(updateDirect)
+        }
         holder.itemView.setOnLongClickListener {
             val homeDirection = DashboardDirections.actionDashboardToDeleteDialog(currentItem)
             it.findNavController().navigate(homeDirection)

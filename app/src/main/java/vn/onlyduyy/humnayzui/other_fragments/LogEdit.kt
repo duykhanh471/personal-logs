@@ -12,15 +12,15 @@ import vn.onlyduyy.humnayzui.R
 import vn.onlyduyy.humnayzui.database.LogDatabase
 import vn.onlyduyy.humnayzui.database.model.LogData
 import vn.onlyduyy.humnayzui.database.repo.LogRepository
-import vn.onlyduyy.humnayzui.databinding.FragmentLogEditBinding
+import vn.onlyduyy.humnayzui.databinding.LogEditBinding
 import vn.onlyduyy.humnayzui.viewmodel.LogViewModel
 import vn.onlyduyy.humnayzui.viewmodel.LogViewModelFactory
 import java.text.SimpleDateFormat
 import java.util.Calendar
 import java.util.Locale
 
-class LogEdit : Fragment(R.layout.fragment_log_edit) {
-    private lateinit var binding: FragmentLogEditBinding
+class LogEdit : Fragment(R.layout.log_edit) {
+    private lateinit var binding: LogEditBinding
     private lateinit var logViewModel: LogViewModel
     private lateinit var logRepository: LogRepository
 
@@ -28,7 +28,7 @@ class LogEdit : Fragment(R.layout.fragment_log_edit) {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = FragmentLogEditBinding.inflate(inflater, container, false)
+        binding = LogEditBinding.inflate(inflater, container, false)
         // Inflate the layout for this fragment
         return binding.root
     }

@@ -12,12 +12,12 @@ import vn.onlyduyy.humnayzui.R
 import vn.onlyduyy.humnayzui.adapter.LogAdapter
 import vn.onlyduyy.humnayzui.database.LogDatabase
 import vn.onlyduyy.humnayzui.database.repo.LogRepository
-import vn.onlyduyy.humnayzui.databinding.FragmentDashboardBinding
+import vn.onlyduyy.humnayzui.databinding.DashboardFragmentBinding
 import vn.onlyduyy.humnayzui.viewmodel.LogViewModel
 import vn.onlyduyy.humnayzui.viewmodel.LogViewModelFactory
 
-class Dashboard : Fragment(R.layout.fragment_dashboard) {
-    private lateinit var binding: FragmentDashboardBinding
+class Dashboard : Fragment(R.layout.dashboard_fragment) {
+    private lateinit var binding: DashboardFragmentBinding
     private lateinit var logAdapter: LogAdapter
     private lateinit var logRepository: LogRepository
     private lateinit var logViewModel: LogViewModel
@@ -26,7 +26,7 @@ class Dashboard : Fragment(R.layout.fragment_dashboard) {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = FragmentDashboardBinding.inflate(inflater, container, false)
+        binding = DashboardFragmentBinding.inflate(inflater, container, false)
         // Inflate the layout for this fragment
         return binding.root
     }

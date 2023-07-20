@@ -6,16 +6,16 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import vn.onlyduyy.humnayzui.R
-import vn.onlyduyy.humnayzui.databinding.FragmentConfigurationBinding
+import vn.onlyduyy.humnayzui.databinding.SettingsFragmentBinding
 
-class Configuration : Fragment(R.layout.fragment_configuration) {
-    private lateinit var binding: FragmentConfigurationBinding
+class Configuration : Fragment(R.layout.settings_fragment) {
+    private lateinit var binding: SettingsFragmentBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = FragmentConfigurationBinding.inflate(inflater, container, false)
+        binding = SettingsFragmentBinding.inflate(inflater, container, false)
         // Inflate the layout for this fragment
         return binding.root
     }

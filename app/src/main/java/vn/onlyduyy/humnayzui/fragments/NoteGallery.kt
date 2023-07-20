@@ -7,18 +7,16 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
-import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import vn.onlyduyy.humnayzui.R
 import vn.onlyduyy.humnayzui.adapter.NoteAdapter
 import vn.onlyduyy.humnayzui.database.LogDatabase
 import vn.onlyduyy.humnayzui.database.repo.NoteRepository
-import vn.onlyduyy.humnayzui.databinding.FragmentNoteGalleryBinding
+import vn.onlyduyy.humnayzui.databinding.NoteGalleryBinding
 import vn.onlyduyy.humnayzui.viewmodel.NoteViewModel
 import vn.onlyduyy.humnayzui.viewmodel.NoteViewModelFactory
 
-class NoteGallery : Fragment(R.layout.fragment_note_gallery) {
-    private lateinit var binding: FragmentNoteGalleryBinding
+class NoteGallery : Fragment(R.layout.note_gallery) {
+    private lateinit var binding: NoteGalleryBinding
     private lateinit var noteRepository: NoteRepository
     private lateinit var noteViewModel: NoteViewModel
     private lateinit var noteAdapter: NoteAdapter
@@ -27,7 +25,7 @@ class NoteGallery : Fragment(R.layout.fragment_note_gallery) {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = FragmentNoteGalleryBinding.inflate(inflater, container, false)
+        binding = NoteGalleryBinding.inflate(inflater, container, false)
         // Inflate the layout for this fragment
         return binding.root
     }
@@ -46,10 +44,7 @@ class NoteGallery : Fragment(R.layout.fragment_note_gallery) {
     private fun displayNoteList() {
         noteAdapter = NoteAdapter()
         binding.noteRecView.adapter = noteAdapter
-        binding.noteRecView.layoutManager = StaggeredGridLayoutManager(
-            2,
-            StaggeredGridLayoutManager.VERTICAL
-        )
+        binding.noteRecView.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
         lastThingTodo()
     }
 

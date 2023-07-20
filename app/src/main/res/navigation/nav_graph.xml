@@ -9,7 +9,7 @@
         android:id="@+id/dashboard"
         android:name="vn.onlyduyy.humnayzui.fragments.Dashboard"
         android:label="fragment_dashboard"
-        tools:layout="@layout/fragment_dashboard" >
+        tools:layout="@layout/dashboard_fragment" >
         <action
             android:id="@+id/action_dashboard_to_configuration"
             app:destination="@id/configuration" />
@@ -22,17 +22,20 @@
         <action
             android:id="@+id/action_dashboard_to_deleteDialog"
             app:destination="@id/deleteDialog" />
+        <action
+            android:id="@+id/action_dashboard_to_logUpdate"
+            app:destination="@id/logUpdate" />
     </fragment>
     <fragment
         android:id="@+id/configuration"
         android:name="vn.onlyduyy.humnayzui.fragments.Configuration"
         android:label="fragment_configuration"
-        tools:layout="@layout/fragment_configuration" />
+        tools:layout="@layout/settings_fragment" />
     <fragment
         android:id="@+id/spaces"
         android:name="vn.onlyduyy.humnayzui.fragments.Spaces"
         android:label="fragment_spaces"
-        tools:layout="@layout/fragment_spaces" >
+        tools:layout="@layout/idea_spaces" >
         <action
             android:id="@+id/action_spaces_to_logEdit2"
             app:destination="@id/logEdit2" />
@@ -44,7 +47,7 @@
         android:id="@+id/logEdit2"
         android:name="vn.onlyduyy.humnayzui.other_fragments.LogEdit"
         android:label="fragment_log_edit"
-        tools:layout="@layout/fragment_log_edit" >
+        tools:layout="@layout/log_edit" >
         <action
             android:id="@+id/action_logEdit2_to_dashboard"
             app:destination="@id/dashboard"
@@ -55,12 +58,19 @@
         android:id="@+id/noteGallery"
         android:name="vn.onlyduyy.humnayzui.fragments.NoteGallery"
         android:label="fragment_note_gallery"
-        tools:layout="@layout/fragment_note_gallery" />
+        tools:layout="@layout/note_gallery" >
+        <action
+            android:id="@+id/action_noteGallery_to_noteDelete"
+            app:destination="@id/noteDelete" />
+        <action
+            android:id="@+id/action_noteGallery_to_noteUpdate"
+            app:destination="@id/noteUpdate" />
+    </fragment>
     <fragment
         android:id="@+id/noteEdit"
         android:name="vn.onlyduyy.humnayzui.other_fragments.NoteEdit"
         android:label="fragment_note_edit"
-        tools:layout="@layout/fragment_note_edit" >
+        tools:layout="@layout/note_edit" >
         <action
             android:id="@+id/action_noteEdit_to_noteGallery"
             app:destination="@id/noteGallery" />
@@ -78,4 +88,43 @@
             android:id="@+id/action_deleteDialog_to_dashboard"
             app:destination="@id/dashboard" />
     </dialog>
+    <dialog
+        android:id="@+id/noteDelete"
+        android:name="vn.onlyduyy.humnayzui.other_fragments.NoteDelete"
+        android:label="note_delete"
+        tools:layout="@layout/note_delete" >
+        <action
+            android:id="@+id/action_noteDelete_to_noteGallery"
+            app:destination="@id/noteGallery" />
+        <argument
+            android:name="deletedNote"
+            app:argType="vn.onlyduyy.humnayzui.database.model.NoteData"
+            app:nullable="true" />
+    </dialog>
+    <fragment
+        android:id="@+id/logUpdate"
+        android:name="vn.onlyduyy.humnayzui.other_fragments.LogUpdate"
+        android:label="log_update"
+        tools:layout="@layout/log_update" >
+        <action
+            android:id="@+id/action_logUpdate_to_dashboard"
+            app:destination="@id/dashboard" />
+        <argument
+            android:name="currentLog"
+            app:argType="vn.onlyduyy.humnayzui.database.model.LogData"
+            app:nullable="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/noteUpdate"
+        android:name="vn.onlyduyy.humnayzui.other_fragments.NoteUpdate"
+        android:label="fragment_note_update"
+        tools:layout="@layout/update_note" >
+        <action
+            android:id="@+id/action_noteUpdate_to_noteGallery"
+            app:destination="@id/noteGallery" />
+        <argument
+            android:name="currentNote"
+            app:argType="vn.onlyduyy.humnayzui.database.model.NoteData"
+            app:nullable="true" />
+    </fragment>
 </navigation>

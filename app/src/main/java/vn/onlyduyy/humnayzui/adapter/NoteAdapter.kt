@@ -6,6 +6,7 @@ import androidx.navigation.findNavController
 import androidx.recyclerview.widget.ListAdapter
 import vn.onlyduyy.humnayzui.database.model.NoteData
 import vn.onlyduyy.humnayzui.databinding.NoteCardBinding
+import vn.onlyduyy.humnayzui.fragments.NoteGalleryDirections
 import vn.onlyduyy.humnayzui.other_fragments.NoteEditDirections
 
 class NoteAdapter : ListAdapter<NoteData, NoteVH>(NoteComparator()) {
@@ -17,8 +18,13 @@ class NoteAdapter : ListAdapter<NoteData, NoteVH>(NoteComparator()) {
         val currentItem = getItem(position)
         holder.bind((currentItem as NoteData))
 
+
+        holder.itemView.setOnClickListener {
+            val updateDirects = NoteGalleryDirections.actionNoteGalleryToNoteUpdate(currentItem)
+            it.findNavController().navigate(updateDirects)
+        }
         holder.itemView.setOnLongClickListener {
-            val noteDirections = NoteEditDirections.actionNoteEditToNoteGallery()
+            val noteDirections = NoteGalleryDirections.actionNoteGalleryToNoteDelete(currentItem)
             it.findNavController().navigate(noteDirections)
             true
         }
