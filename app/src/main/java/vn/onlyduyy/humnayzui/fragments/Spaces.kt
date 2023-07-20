@@ -11,9 +11,6 @@ import vn.onlyduyy.humnayzui.databinding.FragmentSpacesBinding
 
 class Spaces : Fragment(R.layout.fragment_spaces) {
     private lateinit var binding: FragmentSpacesBinding
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

@@ -10,8 +10,8 @@ import androidx.navigation.findNavController
 import com.google.android.material.snackbar.Snackbar
 import vn.onlyduyy.humnayzui.R
 import vn.onlyduyy.humnayzui.database.LogDatabase
-import vn.onlyduyy.humnayzui.database.LogNote
-import vn.onlyduyy.humnayzui.database.LogRepository
+import vn.onlyduyy.humnayzui.database.model.LogData
+import vn.onlyduyy.humnayzui.database.repo.LogRepository
 import vn.onlyduyy.humnayzui.databinding.FragmentLogEditBinding
 import vn.onlyduyy.humnayzui.viewmodel.LogViewModel
 import vn.onlyduyy.humnayzui.viewmodel.LogViewModelFactory
@@ -23,9 +23,6 @@ class LogEdit : Fragment(R.layout.fragment_log_edit) {
     private lateinit var binding: FragmentLogEditBinding
     private lateinit var logViewModel: LogViewModel
     private lateinit var logRepository: LogRepository
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -60,7 +57,7 @@ class LogEdit : Fragment(R.layout.fragment_log_edit) {
         val logTime = formatter.format(currentTime)
 
         if (logTitle.isNotEmpty()) {
-            logViewModel.addLog(LogNote(0, logTitle, logTime, logText))
+            logViewModel.addLog(LogData(0, logTitle, logTime, logText))
             requireView().findNavController().navigate(R.id.action_logEdit2_to_dashboard)
             Snackbar.make(requireView(), "Success!", Snackbar.LENGTH_SHORT).show()
         } else {

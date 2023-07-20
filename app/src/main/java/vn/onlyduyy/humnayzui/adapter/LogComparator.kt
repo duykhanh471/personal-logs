@@ -1,15 +1,13 @@
 package vn.onlyduyy.humnayzui.adapter
 
 import androidx.recyclerview.widget.DiffUtil
-import vn.onlyduyy.humnayzui.database.LogNote
+import vn.onlyduyy.humnayzui.database.model.LogData
 
-class LogComparator : DiffUtil.ItemCallback<LogNote>() {
-    override fun areItemsTheSame(oldItem: LogNote, newItem: LogNote): Boolean {
-        return oldItem == newItem
+class LogComparator : DiffUtil.ItemCallback<LogData>() {
+    override fun areItemsTheSame(oldItem: LogData, newItem: LogData): Boolean {
+        return oldItem.id == newItem.id
     }
-
-    override fun areContentsTheSame(oldItem: LogNote, newItem: LogNote): Boolean {
-        return oldItem.logTitle == newItem.logTitle &&
-        oldItem.logNote == newItem.logNote
+    override fun areContentsTheSame(oldItem: LogData, newItem: LogData): Boolean {
+        return oldItem == newItem
     }
 }

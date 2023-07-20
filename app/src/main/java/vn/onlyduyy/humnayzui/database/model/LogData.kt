@@ -1,4 +1,4 @@
-package vn.onlyduyy.humnayzui.database
+package vn.onlyduyy.humnayzui.database.model
 
 import android.os.Parcelable
 import androidx.room.ColumnInfo
@@ -6,9 +6,9 @@ import androidx.room.Entity
 import androidx.room.PrimaryKey
 import kotlinx.parcelize.Parcelize
 
-@Entity(tableName = "log_note")
+@Entity(tableName = "log_table")
 @Parcelize
-data class LogNote(
+data class LogData(
     @PrimaryKey(autoGenerate = true)
     var id: Int,
     @ColumnInfo(name = "logTitle")

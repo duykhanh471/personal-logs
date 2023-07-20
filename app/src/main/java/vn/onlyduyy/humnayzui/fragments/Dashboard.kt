@@ -11,7 +11,7 @@ import androidx.recyclerview.widget.RecyclerView
 import vn.onlyduyy.humnayzui.R
 import vn.onlyduyy.humnayzui.adapter.LogAdapter
 import vn.onlyduyy.humnayzui.database.LogDatabase
-import vn.onlyduyy.humnayzui.database.LogRepository
+import vn.onlyduyy.humnayzui.database.repo.LogRepository
 import vn.onlyduyy.humnayzui.databinding.FragmentDashboardBinding
 import vn.onlyduyy.humnayzui.viewmodel.LogViewModel
 import vn.onlyduyy.humnayzui.viewmodel.LogViewModelFactory
@@ -21,9 +21,6 @@ class Dashboard : Fragment(R.layout.fragment_dashboard) {
     private lateinit var logAdapter: LogAdapter
     private lateinit var logRepository: LogRepository
     private lateinit var logViewModel: LogViewModel
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

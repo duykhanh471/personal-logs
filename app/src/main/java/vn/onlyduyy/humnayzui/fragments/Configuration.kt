@@ -10,9 +10,6 @@ import vn.onlyduyy.humnayzui.databinding.FragmentConfigurationBinding
 
 class Configuration : Fragment(R.layout.fragment_configuration) {
     private lateinit var binding: FragmentConfigurationBinding
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

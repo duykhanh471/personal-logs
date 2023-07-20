@@ -10,8 +10,8 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.navArgs
 import vn.onlyduyy.humnayzui.R
 import vn.onlyduyy.humnayzui.database.LogDatabase
-import vn.onlyduyy.humnayzui.database.LogNote
-import vn.onlyduyy.humnayzui.database.LogRepository
+import vn.onlyduyy.humnayzui.database.model.LogData
+import vn.onlyduyy.humnayzui.database.repo.LogRepository
 import vn.onlyduyy.humnayzui.databinding.DeleteDialogBinding
 import vn.onlyduyy.humnayzui.viewmodel.LogViewModel
 import vn.onlyduyy.humnayzui.viewmodel.LogViewModelFactory
@@ -21,7 +21,7 @@ class DeleteDialog : DialogFragment() {
     private lateinit var binding: DeleteDialogBinding
     private lateinit var logViewModel: LogViewModel
     private lateinit var logRepository: LogRepository
-    private lateinit var currentLog: LogNote
+    private lateinit var currentLog: LogData
     private val args: DeleteDialogArgs by navArgs()
 
     override fun onCreateView(

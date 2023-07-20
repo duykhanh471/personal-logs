@@ -4,21 +4,18 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
-import vn.onlyduyy.humnayzui.database.LogNote
-import vn.onlyduyy.humnayzui.database.LogRepository
+import vn.onlyduyy.humnayzui.database.model.LogData
+import vn.onlyduyy.humnayzui.database.repo.LogRepository
 
 class LogViewModel(private val logRepository: LogRepository) : ViewModel() {
-    fun addLog(logNote: LogNote) = viewModelScope.launch(Dispatchers.IO) {
-        logRepository.insertLog(logNote)
+    fun addLog(logData: LogData) = viewModelScope.launch(Dispatchers.IO) {
+        logRepository.insertLog(logData)
     }
-
-    fun updateLog(logNote: LogNote) = viewModelScope.launch(Dispatchers.IO) {
-        logRepository.updateLog(logNote)
+    fun updateLog(logData: LogData) = viewModelScope.launch(Dispatchers.IO) {
+        logRepository.updateLog(logData)
     }
-
-    fun deleteLog(logNote: LogNote) = viewModelScope.launch(Dispatchers.IO) {
-        logRepository.deleteLog(logNote)
+    fun deleteLog(logData: LogData) = viewModelScope.launch(Dispatchers.IO) {
+        logRepository.deleteLog(logData)
     }
-
     fun getAllLogs() = logRepository.allLogs
 }

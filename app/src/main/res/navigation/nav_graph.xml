@@ -72,7 +72,7 @@
         tools:layout="@layout/delete_dialog" >
         <argument
             android:name="log"
-            app:argType="vn.onlyduyy.humnayzui.database.LogNote"
+            app:argType="vn.onlyduyy.humnayzui.database.model.LogData"
             app:nullable="true" />
         <action
             android:id="@+id/action_deleteDialog_to_dashboard"

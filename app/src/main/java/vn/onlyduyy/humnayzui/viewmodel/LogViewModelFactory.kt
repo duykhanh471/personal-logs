@@ -2,7 +2,7 @@ package vn.onlyduyy.humnayzui.viewmodel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import vn.onlyduyy.humnayzui.database.LogRepository
+import vn.onlyduyy.humnayzui.database.repo.LogRepository
 import java.lang.IllegalArgumentException
 
 class LogViewModelFactory(private val logRepository: LogRepository) : ViewModelProvider.Factory {
